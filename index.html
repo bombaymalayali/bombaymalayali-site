@@ -91,7 +91,7 @@
         <div class="hero-bottom-row">
           <div class="hero-meta">
             <p class="hero-tagline">
-              Travel, landscape, aerial, portraits and weddings.
+              Travel, landscape, architecture, aerial, portraits and weddings.
             </p>
           </div>
 
@@ -167,31 +167,26 @@
               </div>
             </div>
           </div>
-
-          <div class="about-specs">
-            <div class="about-spec-item">
-              <div class="spec-label">Genres</div>
-              <div class="spec-value">Travel, Landscape, Aerial, Portraits, Wedding</div>
-            </div>
-            <div class="about-spec-item">
-              <div class="spec-label">Instagram</div>
-              <div class="spec-value">@bombaymalayali</div>
-            </div>
-          </div>
         </div>
 
         <div class="about-text-content">
-          <span class="section-eyebrow">Biography</span>
+          <span class="section-eyebrow">About me</span>
           <h2 class="about-lead serif italic">
-            "Add one short line here about how you see the world."
+            Hi, I'm Anand. Online and behind the lens, most people know me as BombayMalayali.
           </h2>
 
           <div class="about-body">
             <p>
-              I am Anand Deyanandan, a photographer. Add a few sentences here about who you are and what you photograph.
+              My story is a bit of a map with many pins. I was born in Kerala, grew up in Oman, spent nearly fourteen years in Mumbai, and now call Amsterdam home. My love for Mumbai's organised chaos, paired with the pull of my Kerala roots, is how the name BombayMalayali came to life. (Malayali, in case you're wondering, is what we call people from Kerala.) It's a reminder of where I come from, no matter which part of the world I'm standing in.
             </p>
             <p>
-              Add where you are based, the kind of work you take on, and how people can book you.
+              By qualification I'm a Chartered Accountant, so I do know exactly what my camera gear cost. I just can't explain why I keep adding to it. Outside the ledger, I've always been the one pointing a camera at things: morning light through mist, cities from above.
+            </p>
+            <p>
+              That has taken me across 25 countries. When ground level doesn't do a place justice, I take to the air. I'm a certified drone pilot, qualified under EASA, the European Union Aviation Safety Agency, with both the A1/A3 and A2 certificates. My photographs have made it from my hard drive to exhibitions, on screens and in galleries, in Times Square in New York, Tokyo, Rome, Dubai and Bangalore.
+            </p>
+            <p>
+              I'm available worldwide for weddings, couple shoots, portraits, aerial projects and brand collaborations. Send me an email or a DM on Instagram and tell me what you have in mind.
             </p>
           </div>
         </div>
@@ -217,18 +212,34 @@
           </div>
 
           <div class="contact-meta-row">
-            <div></div>
+            <div class="follow-label">
+              <span class="follow-eyebrow">Follow me</span>
+              <span class="follow-handle">@bombaymalayali</span>
+            </div>
 
-            <ul class="contact-socials">
-              <!-- Instagram Link (edit INSTAGRAM_URL in the script below) -->
+            <!-- Social links (edit INSTAGRAM_URL, X_URL and YOUTUBE_URL in the script below) -->
+            <ul class="social-icons">
               <li>
-                <a id="instagramLink" href="https://instagram.com/bombaymalayali" target="_blank" rel="noopener noreferrer">
+                <a class="social-icon" id="instagramLink" href="https://instagram.com/bombaymalayali" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @bombaymalayali" title="Instagram">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                   </svg>
-                  <span>Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-icon" id="xLink" href="https://x.com/bombaymalayali" target="_blank" rel="noopener noreferrer" aria-label="X: @bombaymalayali" title="X">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-icon" id="youtubeLink" href="https://www.youtube.com/@bombaymalayali" target="_blank" rel="noopener noreferrer" aria-label="YouTube: @bombaymalayali" title="YouTube">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -267,7 +278,7 @@
   <script>
     /* Path to your portrait for the About section (e.g. "images/anand-portrait.jpg").
        Leave empty "" to show the placeholder frame. */
-    const ABOUT_PHOTO = "";
+    const ABOUT_PHOTO = "images/anand.jpg";
 
     /* Path to your hero background image. */
     const HERO_IMAGE = "images/hero.jpg";
@@ -275,17 +286,21 @@
     /* Contact details: update these for your mailbox and social profile */
     const CONTACT_EMAIL = "hello@bombaymalayali.com";
     const INSTAGRAM_URL = "https://instagram.com/bombaymalayali";
+    const X_URL = "https://x.com/bombaymalayali";
+    const YOUTUBE_URL = "https://www.youtube.com/@bombaymalayali";
 
     /* ---------- contact, hero, about ---------- */
     const mailLink = $("mailLink");
     const instagramLink = $("instagramLink");
+    const xLink = $("xLink");
+    const youtubeLink = $("youtubeLink");
     if (mailLink && CONTACT_EMAIL) {
       mailLink.href = `mailto:${CONTACT_EMAIL}`;
       mailLink.textContent = CONTACT_EMAIL;
     }
-    if (instagramLink && INSTAGRAM_URL) {
-      instagramLink.href = INSTAGRAM_URL;
-    }
+    if (instagramLink && INSTAGRAM_URL) instagramLink.href = INSTAGRAM_URL;
+    if (xLink && X_URL) xLink.href = X_URL;
+    if (youtubeLink && YOUTUBE_URL) youtubeLink.href = YOUTUBE_URL;
 
     if (HERO_IMAGE) {
       document.documentElement.style.setProperty("--hero-image", `url("${HERO_IMAGE}")`);
