@@ -126,7 +126,7 @@ const PHOTOS = [
   { cat: "aerial", src: "images/aerial/aerial-5.jpg", alt: "Aerial photo 5", w: 2000, h: 1333 },
   { cat: "aerial", src: "images/aerial/aerial-6.jpg", alt: "Aerial photo 6", w: 1500, h: 2000 },
   { cat: "aerial", src: "images/aerial/aerial-7.jpg", alt: "Aerial photo 7", w: 2000, h: 1334 },
-  /* ---- PORTRAITS (9) · alt text is a placeholder: replace later ---- */
+  /* ---- PORTRAITS (17) · alt text is a placeholder: replace later ---- */
   { cat: "portraits", src: "images/portraits/portrait-1.jpg", alt: "Portrait 1", w: 1500, h: 2000 },
   { cat: "portraits", src: "images/portraits/portrait-2.jpg", alt: "Portrait 2", w: 1500, h: 2000 },
   { cat: "portraits", src: "images/portraits/portrait-3.jpg", alt: "Portrait 3", w: 1500, h: 2000 },
@@ -136,6 +136,26 @@ const PHOTOS = [
   { cat: "portraits", src: "images/portraits/portrait-8.jpg", alt: "Portrait 8", w: 1500, h: 2000 },
   { cat: "portraits", src: "images/portraits/portrait-9.jpg", alt: "Portrait 9", w: 2000, h: 1333 },
   { cat: "portraits", src: "images/portraits/portrait-10.jpg", alt: "Portrait 10", w: 1500, h: 2000 },
+  { cat: "portraits", src: "images/portraits/portrait-11.jpg", alt: "Portrait 11", w: 2000, h: 1334 },
+  { cat: "portraits", src: "images/portraits/portrait-12.jpg", alt: "Portrait 12", w: 1334, h: 2000 },
+  { cat: "portraits", src: "images/portraits/portrait-13.jpg", alt: "Portrait 13", w: 1334, h: 2000 },
+  { cat: "portraits", src: "images/portraits/portrait-14.jpg", alt: "Portrait 14", w: 2000, h: 1334 },
+  { cat: "portraits", src: "images/portraits/portrait-15.jpg", alt: "Portrait 15", w: 1500, h: 2000 },
+  { cat: "portraits", src: "images/portraits/portrait-16.jpg", alt: "Portrait 16", w: 1500, h: 2000 },
+  { cat: "portraits", src: "images/portraits/portrait-17.jpg", alt: "Portrait 17", w: 1500, h: 2000 },
+  { cat: "portraits", src: "images/portraits/portrait-18.jpg", alt: "Portrait 18", w: 1600, h: 2000 },
+  /* ---- WEDDING (11) · alt text is a placeholder: replace later ---- */
+  { cat: "wedding", src: "images/wedding/wedding-1.jpg", alt: "Wedding photo 1", w: 1334, h: 2000 },
+  { cat: "wedding", src: "images/wedding/wedding-2.jpg", alt: "Wedding photo 2", w: 1333, h: 2000 },
+  { cat: "wedding", src: "images/wedding/wedding-3.jpg", alt: "Wedding photo 3", w: 2000, h: 1429 },
+  { cat: "wedding", src: "images/wedding/wedding-4.jpg", alt: "Wedding photo 4", w: 2000, h: 1333 },
+  { cat: "wedding", src: "images/wedding/wedding-5.jpg", alt: "Wedding photo 5", w: 2000, h: 1334 },
+  { cat: "wedding", src: "images/wedding/wedding-6.jpg", alt: "Wedding photo 6", w: 1333, h: 2000 },
+  { cat: "wedding", src: "images/wedding/wedding-7.jpg", alt: "Wedding photo 7", w: 2000, h: 1334 },
+  { cat: "wedding", src: "images/wedding/wedding-8.jpg", alt: "Wedding photo 8", w: 2000, h: 1334 },
+  { cat: "wedding", src: "images/wedding/wedding-9.jpg", alt: "Wedding photo 9", w: 2000, h: 1334 },
+  { cat: "wedding", src: "images/wedding/wedding-10.jpg", alt: "Wedding photo 10", w: 2000, h: 1334 },
+  { cat: "wedding", src: "images/wedding/wedding-11.jpg", alt: "Wedding photo 11", w: 1334, h: 2000 },
   /* ---- OTHER (10) · alt text is a placeholder: replace later ---- */
   { cat: "other", src: "images/other/other-1.jpg", alt: "Other photo 1", w: 1600, h: 2000 },
   { cat: "other", src: "images/other/other-2.jpg", alt: "Other photo 2", w: 1600, h: 2000 },
@@ -173,9 +193,9 @@ const COVERS = {
   aerial: "images/aerial/aerial-1.jpg",
   architecture: "images/architecture/architecture-21.jpg",
   portraits: "images/portraits/portrait-1.jpg",
-  travel: "images/travel/travel-32.jpg"
+  travel: "images/travel/travel-32.jpg",
+  wedding: "images/wedding/wedding-4.jpg"
   /* landscape: "images/landscape/landscape-1.jpg", */
-  /* wedding: "images/wedding/wedding-1.jpg", */
 };
 
 /* EXHIBITIONS: photos or videos from places where your work has been shown.
