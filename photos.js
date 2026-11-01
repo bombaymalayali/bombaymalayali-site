@@ -170,10 +170,10 @@ const HIDDEN_GENRES = ["other"];
    To swap a cover, change the path. To add a category to the home page
    (for example wedding), add a line for it, then add a comma to the line before. */
 const COVERS = {
-  travel: "images/travel/travel-1.jpg",
-  architecture: "images/architecture/architecture-1.jpg",
   aerial: "images/aerial/aerial-1.jpg",
-  portraits: "images/portraits/portrait-1.jpg"
+  architecture: "images/architecture/architecture-21.jpg",
+  portraits: "images/portraits/portrait-1.jpg",
+  travel: "images/travel/travel-32.jpg"
   /* landscape: "images/landscape/landscape-1.jpg", */
   /* wedding: "images/wedding/wedding-1.jpg", */
 };

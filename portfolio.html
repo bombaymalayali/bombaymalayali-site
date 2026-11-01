@@ -153,8 +153,20 @@
       renderGallery();
     }
 
+    // Shuffle the photos once per visit, so every category looks mixed.
+    // The order then holds while the visitor switches between filters.
+    function shuffled(list) {
+      const a = list.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+    const galleryOrder = shuffled(visiblePhotos());
+
     function renderGallery() {
-      const items = visiblePhotos().filter(p => currentFilter === "all" || p.cat === currentFilter);
+      const items = galleryOrder.filter(p => currentFilter === "all" || p.cat === currentFilter);
       renderTiles(grid, items);
     }
 
