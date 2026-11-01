@@ -16,7 +16,7 @@
    ============================================================ */
 
 const PHOTOS = [
-  /* ---- TRAVEL (69) · alt text is a placeholder: replace later ---- */
+  /* ---- TRAVEL (64) · alt text is a placeholder: replace later ---- */
   { cat: "travel", src: "images/travel/travel-1.jpg", alt: "Travel photo 1", w: 1335, h: 2000 },
   { cat: "travel", src: "images/travel/travel-2.jpg", alt: "Travel photo 2", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-3.jpg", alt: "Travel photo 3", w: 1500, h: 2000 },
@@ -27,7 +27,6 @@ const PHOTOS = [
   { cat: "travel", src: "images/travel/travel-8.jpg", alt: "Travel photo 8", w: 1600, h: 2000 },
   { cat: "travel", src: "images/travel/travel-9.jpg", alt: "Travel photo 9", w: 1473, h: 2000 },
   { cat: "travel", src: "images/travel/travel-10.jpg", alt: "Travel photo 10", w: 1500, h: 2000 },
-  { cat: "travel", src: "images/travel/travel-11.jpg", alt: "Travel photo 11", w: 2000, h: 1600 },
   { cat: "travel", src: "images/travel/travel-12.jpg", alt: "Travel photo 12", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-13.jpg", alt: "Travel photo 13", w: 2000, h: 1500 },
   { cat: "travel", src: "images/travel/travel-14.jpg", alt: "Travel photo 14", w: 1500, h: 2000 },
@@ -36,7 +35,6 @@ const PHOTOS = [
   { cat: "travel", src: "images/travel/travel-17.jpg", alt: "Travel photo 17", w: 2000, h: 1500 },
   { cat: "travel", src: "images/travel/travel-18.jpg", alt: "Travel photo 18", w: 1333, h: 2000 },
   { cat: "travel", src: "images/travel/travel-19.jpg", alt: "Travel photo 19", w: 1500, h: 2000 },
-  { cat: "travel", src: "images/travel/travel-20.jpg", alt: "Travel photo 20", w: 2000, h: 1333 },
   { cat: "travel", src: "images/travel/travel-21.jpg", alt: "Travel photo 21", w: 1333, h: 2000 },
   { cat: "travel", src: "images/travel/travel-22.jpg", alt: "Travel photo 22", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-23.jpg", alt: "Travel photo 23", w: 1333, h: 2000 },
@@ -54,14 +52,12 @@ const PHOTOS = [
   { cat: "travel", src: "images/travel/travel-35.jpg", alt: "Travel photo 35", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-36.jpg", alt: "Travel photo 36", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-37.jpg", alt: "Travel photo 37", w: 1125, h: 2000 },
-  { cat: "travel", src: "images/travel/travel-38.jpg", alt: "Travel photo 38", w: 1125, h: 2000 },
   { cat: "travel", src: "images/travel/travel-39.jpg", alt: "Travel photo 39", w: 1499, h: 2000 },
   { cat: "travel", src: "images/travel/travel-40.jpg", alt: "Travel photo 40", w: 2000, h: 1000 },
   { cat: "travel", src: "images/travel/travel-41.jpg", alt: "Travel photo 41", w: 2000, h: 1333 },
   { cat: "travel", src: "images/travel/travel-42.jpg", alt: "Travel photo 42", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-43.jpg", alt: "Travel photo 43", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-44.jpg", alt: "Travel photo 44", w: 1500, h: 2000 },
-  { cat: "travel", src: "images/travel/travel-45.jpg", alt: "Travel photo 45", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-46.jpg", alt: "Travel photo 46", w: 2000, h: 1500 },
   { cat: "travel", src: "images/travel/travel-49.jpg", alt: "Travel photo 49", w: 1334, h: 2000 },
   { cat: "travel", src: "images/travel/travel-50.jpg", alt: "Travel photo 50", w: 1333, h: 2000 },
@@ -80,7 +76,6 @@ const PHOTOS = [
   { cat: "travel", src: "images/travel/travel-64.jpg", alt: "Travel photo 64", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-65.jpg", alt: "Travel photo 65", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-66.jpg", alt: "Travel photo 66", w: 1500, h: 2000 },
-  { cat: "travel", src: "images/travel/travel-67.jpg", alt: "Travel photo 67", w: 1333, h: 2000 },
   { cat: "travel", src: "images/travel/travel-68.jpg", alt: "Travel photo 68", w: 1333, h: 2000 },
   { cat: "travel", src: "images/travel/travel-69.jpg", alt: "Travel photo 69", w: 1500, h: 2000 },
   { cat: "travel", src: "images/travel/travel-70.jpg", alt: "Travel photo 70", w: 1500, h: 2000 },
