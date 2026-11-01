@@ -39,7 +39,7 @@ function titleOf(item) {
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.setAttribute("content", theme === "dark" ? "#090b0e" : "#f9f8f5");
+  if (meta) meta.setAttribute("content", theme === "dark" ? "#100f0e" : "#f4f1ea");
 }
 
 try {
@@ -60,6 +60,14 @@ if (themeBtn) {
 // Copyright year in the footer
 const yearEl = $("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* Visitors who ask for less data or less motion get still tiles: videos wait for a click */
+const LOW_MOTION = (() => {
+  try {
+    const saveData = Boolean(navigator.connection && navigator.connection.saveData);
+    return saveData || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (e) { return false; }
+})();
 
 /* ---------- PHOTO TILES ---------- */
 const PLAY_SVG = `<div class="tile-play-indicator"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div></div>`;
@@ -116,14 +124,18 @@ function renderTiles(container, items, opts) {
       mediaWrapper.style.aspectRatio = item.ratio || (item.w && item.h ? item.w + " / " + item.h : "16 / 9");
 
       const vid = document.createElement("video");
-      vid.src = item.src;
       vid.muted = true;
       vid.loop = true;
       vid.playsInline = true;
       vid.preload = "metadata";
+      vid.setAttribute("aria-hidden", "true");
+      if (item.poster) vid.poster = item.poster;
+      // "#t=0.1" asks for the first frame, so the tile is not blank before it plays
+      vid.src = item.poster ? item.src : item.src + "#t=0.1";
 
       mediaWrapper.appendChild(vid);
-      mediaWrapper.insertAdjacentHTML("beforeend", PLAY_SVG);
+      // The play button only shows when the clip does not play by itself
+      if (LOW_MOTION) mediaWrapper.insertAdjacentHTML("beforeend", PLAY_SVG);
       mediaWrapper.insertAdjacentHTML("beforeend", `
         <div class="tile-overlay">
           <div class="tile-top-badge">
@@ -188,9 +200,14 @@ function renderTiles(container, items, opts) {
   setupVideoIntersection(container);
 }
 
+let tileVideoObserver = null;
+
 function setupVideoIntersection(container) {
-  if (!("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver((entries) => {
+  // Stop watching the tiles from the previous filter before watching the new ones
+  if (tileVideoObserver) tileVideoObserver.disconnect();
+  tileVideoObserver = null;
+  if (LOW_MOTION || !("IntersectionObserver" in window)) return;
+  const observer = tileVideoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const video = entry.target;
       if (entry.isIntersecting) {
@@ -267,6 +284,7 @@ function renderLightboxContent(index) {
     const video = document.createElement("video");
     video.src = item.src;
     video.controls = true;
+    video.muted = true;        // the clips are silent; muted lets every browser autoplay them
     video.autoplay = true;
     video.playsInline = true;
     video.loop = true;
