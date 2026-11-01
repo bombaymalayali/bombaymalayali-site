@@ -334,10 +334,43 @@ img, video {
   opacity: 0;
   transition: opacity 1.2s ease;
   pointer-events: none;
+  filter: brightness(1.3);   /* lifts the night footage; the shade above keeps the text readable */
 }
 
 .hero-video.is-playing {
   opacity: 1;
+}
+
+/* Registered so the shade can fade at the same pace as the video */
+@property --hero-shade-mid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+
+@property --hero-shade-top {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+
+.hero {
+  transition: --hero-shade-mid 1.2s ease, --hero-shade-top 1.2s ease;
+}
+
+.hero::before {
+  transition: opacity 1.2s ease;
+}
+
+/* The night footage is darker than the photo, so while it plays the shade eases off
+   (dark theme). The photo keeps the stronger shade, which its snow needs. */
+:root[data-theme="dark"] .hero:has(.hero-video.is-playing) {
+  --hero-shade-mid: rgba(16, 15, 14, 0.15);
+  --hero-shade-top: rgba(16, 15, 14, 0.3);
+}
+
+:root[data-theme="dark"] .hero:has(.hero-video.is-playing)::before {
+  opacity: 0.45;
 }
 
 /* Above the photo and video: the shade that keeps the name readable (both themes) */
