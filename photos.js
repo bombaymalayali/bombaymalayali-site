@@ -121,6 +121,12 @@ const PHOTOS = [
   { cat: "aerial", src: "images/aerial/aerial-5.jpg", alt: "Aerial photo 5", w: 2000, h: 1333 },
   { cat: "aerial", src: "images/aerial/aerial-6.jpg", alt: "Aerial photo 6", w: 1500, h: 2000 },
   { cat: "aerial", src: "images/aerial/aerial-7.jpg", alt: "Aerial photo 7", w: 2000, h: 1334 },
+  /* ---- AERIAL CLIPS (5) · silent .mp4 loops · alt text is a placeholder: replace later ---- */
+  { cat: "aerial", type: "video", src: "images/aerial/clip-1.mp4", alt: "Aerial clip 1", ratio: "16 / 9" },
+  { cat: "aerial", type: "video", src: "images/aerial/clip-2.mp4", alt: "Aerial clip 2", ratio: "16 / 9" },
+  { cat: "aerial", type: "video", src: "images/aerial/clip-3.mp4", alt: "Aerial clip 3", ratio: "720 / 1256" },
+  { cat: "aerial", type: "video", src: "images/aerial/clip-4.mp4", alt: "Aerial clip 4", ratio: "16 / 9" },
+  { cat: "aerial", type: "video", src: "images/aerial/clip-5.mp4", alt: "Aerial clip 5", ratio: "16 / 9" },
   /* ---- PORTRAITS (17) · alt text is a placeholder: replace later ---- */
   { cat: "portraits", src: "images/portraits/portrait-1.jpg", alt: "Portrait 1", w: 1500, h: 2000 },
   { cat: "portraits", src: "images/portraits/portrait-2.jpg", alt: "Portrait 2", w: 1500, h: 2000 },
