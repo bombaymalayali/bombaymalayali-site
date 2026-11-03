@@ -1,0 +1,5 @@
+# Search engines are welcome. Cloudflare adds its own crawler rules above this.
+User-agent: *
+Allow: /
+
+Sitemap: https://bombaymalayali.com/sitemap.xml
