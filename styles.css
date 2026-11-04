@@ -53,6 +53,8 @@
   --ph-tone-2: #171615;
   --hero-shade-mid: rgba(16, 15, 14, 0.4);
   --hero-shade-top: rgba(16, 15, 14, 0.7);
+  --hero-shade-mid-video: rgba(16, 15, 14, 0.15);   /* lighter shade while the night video plays */
+  --hero-shade-top-video: rgba(16, 15, 14, 0.3);
   /* Hero background image slot. Replace 'none' with url("images/hero.jpg") */
   --hero-image: none;
 }
@@ -365,8 +367,8 @@ img, video {
 /* The night footage is darker than the photo, so while it plays the shade eases off
    (dark theme). The photo keeps the stronger shade, which its snow needs. */
 :root[data-theme="dark"] .hero:has(.hero-video.is-playing) {
-  --hero-shade-mid: rgba(16, 15, 14, 0.15);
-  --hero-shade-top: rgba(16, 15, 14, 0.3);
+  --hero-shade-mid: var(--hero-shade-mid-video);
+  --hero-shade-top: var(--hero-shade-top-video);
 }
 
 :root[data-theme="dark"] .hero:has(.hero-video.is-playing)::before {
