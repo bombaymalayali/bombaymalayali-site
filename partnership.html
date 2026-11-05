@@ -114,13 +114,19 @@
       <div class="wrap">
         <h2 class="kit-title serif" id="shoot-title">What I shoot</h2>
 
-        <div class="kit-pillar">
+        <div class="kit-pillar kit-pillar-aerial">
           <div class="kit-pillar-text">
             <h3 class="serif">Aerial photos and videos</h3>
             <p>Cityscapes, tulip fields and Mumbai’s Marine Drive, from the air.</p>
           </div>
-          <div class="kit-pillar-media kit-media-wide">
-            <img src="images/aerial/aerial-4.jpg" width="2000" height="1498" loading="lazy" alt="Lit towers of a city skyline at night, seen from the air">
+          <div class="kit-pillar-media kit-media-feature">
+            <div class="kit-video">
+              <video src="images/aerial/clip-4.mp4" poster="images/partners/coast-at-night.jpg" muted loop playsinline preload="none" aria-label="Video: Marine Drive in Mumbai at night, with fireworks over the sea"></video>
+              <button class="kit-video-toggle" type="button" aria-label="Pause video" hidden>
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+              </button>
+            </div>
             <div class="kit-video">
               <video src="images/aerial/clip-1.mp4" poster="images/partners/tulip-fields.jpg" muted loop playsinline preload="none" aria-label="Video: tulip fields in stripes of colour at sunset, with a train crossing"></video>
               <button class="kit-video-toggle" type="button" aria-label="Pause video" hidden>
@@ -128,12 +134,8 @@
                 <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
               </button>
             </div>
-            <div class="kit-video">
-              <video src="images/aerial/clip-4.mp4" poster="images/partners/coast-at-night.jpg" muted loop playsinline preload="none" aria-label="Video: Marine Drive in Mumbai at night, with fireworks over the sea"></video>
-              <button class="kit-video-toggle" type="button" aria-label="Pause video" hidden>
-                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
-                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
-              </button>
+            <div class="kit-still">
+              <img src="images/aerial/aerial-4.jpg" width="2000" height="1498" loading="lazy" alt="Lit towers of a city skyline at night, seen from the air">
             </div>
           </div>
         </div>
@@ -220,68 +222,61 @@
         </ul>
         <p class="kit-rates">Rates and availability on request.</p>
 
-        <!-- Audience figures. Update the numbers and the date together.
-             To add a figure, copy one <div> block. -->
+        <!-- Audience figures. Update the numbers and the date together. -->
         <div class="kit-audience">
           <h3 class="serif">Audience</h3>
-          <dl class="kit-figures">
-            <div>
-              <dt>Instagram followers</dt>
-              <dd class="serif">54.8K</dd>
-            </div>
-            <div>
-              <dt>Instagram reach, last 30 days</dt>
-              <dd class="serif">180K</dd>
-            </div>
-            <div>
-              <dt>Followers on X</dt>
-              <dd class="serif">5K</dd>
-            </div>
-          </dl>
+          <p class="kit-audience-line serif">54.8K people follow Bombay Malayali on Instagram, where 180K accounts were reached in the last 30 days. Another 5K follow on X.</p>
           <p class="kit-note">Figures as of November 2026.</p>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         6. KIT AND COLLABORATIONS
+         6. COLLABORATIONS AND KIT
+         Logos are in images/partners/logos/. Amazing Aerial has a light
+         version (dark theme) and a dark version (light theme).
          ============================================================ -->
-    <section class="kit-section kit-details" aria-label="Kit and collaborations">
-      <div class="wrap kit-details-grid">
-        <div>
-          <h2 class="kit-title serif">Kit</h2>
-          <dl class="kit-gear">
-            <div>
-              <dt>Drones</dt>
-              <dd>DJI Mavic 4 Pro</dd>
-              <dd>DJI Mavic 3 Classic</dd>
-              <dd>DJI Mini 4 Pro</dd>
-            </div>
-            <div>
-              <dt>Cameras</dt>
-              <dd>Sony A7 IV</dd>
-              <dd>Fujifilm X-T50</dd>
-            </div>
-            <div>
-              <dt>Lenses</dt>
-              <dd>Sony 85mm f/1.4</dd>
-              <dd>Sony 70‑300mm f/4‑5.6</dd>
-            </div>
-            <div>
-              <dt>Phones</dt>
-              <dd>iPhone 15 Pro Max</dd>
-              <dd>vivo X100</dd>
-            </div>
-          </dl>
-        </div>
+    <section class="kit-section kit-collabs" aria-labelledby="collabs-title">
+      <div class="wrap">
+        <h2 class="kit-title serif" id="collabs-title">Collaborations</h2>
+        <ul class="kit-logos">
+          <li>
+            <img class="kit-logo kit-logo-aa logo-for-dark" src="images/partners/logos/amazing-aerial-light.png" width="381" height="102" alt="Amazing Aerial">
+            <img class="kit-logo kit-logo-aa logo-for-light" src="images/partners/logos/amazing-aerial-dark.png" width="381" height="102" alt="Amazing Aerial">
+          </li>
+          <li>
+            <img class="kit-logo kit-logo-vivo" src="images/partners/logos/vivo.png" width="600" height="157" alt="vivo">
+          </li>
+          <li>
+            <img class="kit-logo kit-logo-heat" src="images/partners/logos/the-heat-company.png" width="200" height="200" alt="The Heat Company">
+          </li>
+        </ul>
 
-        <div>
-          <h2 class="kit-title serif">Collaborations</h2>
-          <ul class="kit-brands">
-            <li class="serif">Amazing Aerials</li>
-            <li class="serif">vivo</li>
-            <li class="serif">The Heat Company</li>
-          </ul>
+        <div class="kit-gear-block">
+          <h3 class="serif">Kit</h3>
+            <dl class="kit-gear">
+              <div>
+                <dt>Drones</dt>
+                <dd>DJI Mavic 4 Pro</dd>
+                <dd>DJI Mavic 3 Classic</dd>
+                <dd>DJI Mini 4 Pro</dd>
+              </div>
+              <div>
+                <dt>Cameras</dt>
+                <dd>Sony A7 IV</dd>
+                <dd>Fujifilm X-T50</dd>
+              </div>
+              <div>
+                <dt>Lenses</dt>
+                <dd>Sony 85mm f/1.4</dd>
+                <dd>Sony 70‑300mm f/4‑5.6</dd>
+              </div>
+              <div>
+                <dt>Phones</dt>
+                <dd>iPhone 15 Pro Max</dd>
+                <dd>vivo X100</dd>
+              </div>
+            </dl>
         </div>
       </div>
     </section>

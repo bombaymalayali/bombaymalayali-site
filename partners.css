@@ -20,9 +20,21 @@
 }
 
 @media (min-width: 900px) {
+  .kit-intro {
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - 4.5rem);
+    padding: 3rem 0;
+  }
+
   .kit-intro-grid {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    width: min(100% - 2.5rem, 1360px);
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
     gap: 5rem;
+  }
+
+  .kit-intro-photo {
+    justify-self: end;
   }
 }
 
@@ -104,7 +116,8 @@
 }
 
 .kit-intro-photo {
-  max-width: 26rem;
+  width: 100%;
+  max-width: 30rem;
 }
 
 .kit-intro-photo img {
@@ -155,27 +168,11 @@
   margin-bottom: 1.5rem;
 }
 
-.kit-figures {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
-  gap: 1.5rem 2rem;
-}
-
-.kit-figures div {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 0.35rem;
-}
-
-.kit-figures dt {
-  font-size: 0.94rem;
-  color: var(--text-muted);
-}
-
-.kit-figures dd {
-  font-size: clamp(2.6rem, 5vw, 3.75rem);
-  line-height: 1;
+.kit-audience-line {
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.25;
   color: var(--text);
+  max-width: 34ch;
   font-variant-numeric: tabular-nums;
 }
 
@@ -286,13 +283,87 @@
   aspect-ratio: 4 / 5;
 }
 
-@media (max-width: 560px) {
-  .kit-pillar-media {
-    gap: 0.5rem;
+/* Aerial: the work brands come for, so it gets the full width and scale */
+@media (min-width: 900px) {
+  .kit-pillar-aerial {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .kit-media-wide {
+  .kit-pillar-aerial .kit-pillar-text {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    gap: 0 4rem;
+    align-items: baseline;
+  }
+}
+
+.kit-media-feature {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.kit-media-feature > :first-child {
+  grid-row: 1 / span 2;
+}
+
+.kit-media-feature > :first-child video {
+  aspect-ratio: 16 / 9;
+}
+
+/* The two smaller pieces fill whatever height the large video sets */
+.kit-media-feature > :not(:first-child) {
+  position: relative;
+  min-height: 0;
+}
+
+.kit-media-feature > :not(:first-child) img,
+.kit-media-feature > :not(:first-child) video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 700px) {
+  .kit-media-feature {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+  }
+
+  .kit-media-feature > :first-child {
+    grid-row: auto;
+  }
+
+  .kit-media-feature > :not(:first-child) img,
+  .kit-media-feature > :not(:first-child) video {
+    position: static;
+  }
+
+  .kit-media-feature img,
+  .kit-media-feature video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* 2. Phones: portraits and travel become a swipeable strip, not thumbnails */
+@media (max-width: 560px) {
+  .kit-media-tall {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    margin-right: -1.25rem;
+    padding-right: 1.25rem;
+    scrollbar-width: thin;
+  }
+
+  .kit-media-tall img {
+    flex: 0 0 72%;
+    width: 72%;
+    min-width: 0;
+    scroll-snap-align: start;
   }
 }
 
@@ -387,27 +458,34 @@
 /* ---------- Work with me ---------- */
 .kit-services {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-  gap: 0;
   border-top: 1px solid var(--line);
 }
 
 .kit-services li {
-  padding: 1.6rem 1.5rem 1.6rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.4rem 4rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--line);
 }
 
+@media (min-width: 900px) {
+  .kit-services li {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+}
+
 .kit-services h3 {
-  font-size: 1.5rem;
-  line-height: 1.15;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
   color: var(--text);
-  margin-bottom: 0.45rem;
 }
 
 .kit-services p {
   color: var(--text-muted);
-  max-width: 34ch;
+  font-size: 1.08rem;
+  max-width: 40ch;
 }
 
 .kit-rates {
@@ -416,18 +494,65 @@
   color: var(--text);
 }
 
-/* ---------- Kit and collaborations ---------- */
-.kit-details-grid {
+/* ---------- Collaborations and kit ---------- */
+.kit-logos {
+  list-style: none;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 4rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-@media (min-width: 900px) {
-  .kit-details-grid {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
-    gap: 5rem;
+.kit-logos li {
+  display: grid;
+  place-items: center;
+  min-height: 11rem;
+  padding: 2rem 1.5rem;
+}
+
+.kit-logos li + li {
+  border-left: 1px solid var(--line);
+}
+
+.kit-logo {
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.kit-logo-aa { height: 3.6rem; }
+.kit-logo-vivo { height: 2.6rem; }
+.kit-logo-heat { height: 5.5rem; }
+
+/* Amazing Aerial: light logo on the dark theme, dark logo on the light theme */
+.logo-for-light { display: none; }
+:root[data-theme="light"] .logo-for-light { display: block; }
+:root[data-theme="light"] .logo-for-dark { display: none; }
+
+@media (max-width: 560px) {
+  .kit-logos {
+    grid-template-columns: minmax(0, 1fr);
   }
+
+  .kit-logos li {
+    min-height: 7.5rem;
+  }
+
+  .kit-logos li + li {
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
+}
+
+.kit-gear-block {
+  margin-top: 3.5rem;
+}
+
+.kit-gear-block h3 {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 1.5rem;
 }
 
 .kit-gear {
@@ -447,22 +572,6 @@
 .kit-gear dd {
   color: var(--text);
   padding: 0.2rem 0;
-}
-
-.kit-brands {
-  list-style: none;
-}
-
-.kit-brands li {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  line-height: 1.2;
-  color: var(--text);
-  padding: 0.55rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.kit-brands li:first-child {
-  border-top: 1px solid var(--line);
 }
 
 /* ---------- Contact ---------- */
